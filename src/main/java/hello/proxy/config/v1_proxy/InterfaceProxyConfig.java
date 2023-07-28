@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class InterfaceProxyConfig {
     @Bean
-    public OrderControllerV1 orderControllerV1(LogTrace logTrace) {
+    public OrderControllerV1 orderController(LogTrace logTrace) {
         OrderControllerV1Impl controllerImpl = new OrderControllerV1Impl(orderService(logTrace));
         return new OrderControllerInterfaceProxy(controllerImpl, logTrace);
     }
