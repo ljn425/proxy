@@ -21,8 +21,5 @@ public class OrderRepositoryInterfaceProxy implements OrderRepositoryV1 {
             logTrace.exception(status, e);
             throw e;
         }
-
-
-
     }
 }
